@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junk2Cash - Connect with Junk Car Sellers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Junk2Cash</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html" class="btn btn-login">Login</a></li>
+                <li><a href="register.html" class="btn btn-register">Register</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Get Quality Junk Car Leads Delivered to You</h1>
+                <p>Connect with sellers looking to sell their junk cars. Register now to start receiving leads in your area.</p>
+                <div class="cta-buttons">
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
+                    <a href="how-it-works.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2>How Junk2Cash Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>1. Register</h3>
+                    <p>Create your account with your business details and coverage area.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>2. Choose Your Plan</h3>
+                    <p>Select a lead package that suits your business needs.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>3. Set Location</h3>
+                    <p>Specify the states and areas where you want to receive leads.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-comments"></i>
+                    <h3>4. Get Leads</h3>
+                    <p>Receive quality leads through our messaging interface.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Choose Your Lead Package</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Basic Package</h3>
+                    <div class="price">$300</div>
+                    <ul class="features">
+                        <li>25 Verified Leads</li>
+                        <li>Mix of Clean and Non-Title</li>
+                        <li>30 Days Access</li>
+                        <li>Email Support</li>
+                        <li>Lead Quality Guarantee</li>
+                    </ul>
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Standard Package</h3>
+                    <div class="price">$600</div>
+                    <ul class="features">
+                        <li>50 Verified Leads</li>
+                        <li>Clean and Non-Title Vehicles</li>
+                        <li>30 Days Access</li>
+                        <li>Priority Support</li>
+                        <li>Lead Quality Guarantee</li>
+                        <li>Real-time Notifications</li>
+                    </ul>
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium Package</h3>
+                    <div class="price">$900</div>
+                    <ul class="features">
+                        <li>50 Premium Leads</li>
+                        <li>Clean Title Vehicles Only</li>
+                        <li>30 Days Access</li>
+                        <li>24/7 Priority Support</li>
+                        <li>Lead Quality Guarantee</li>
+                        <li>Real-time Notifications</li>
+                        <li>Exclusive Territory Rights</li>
+                    </ul>
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="section-description">Have questions? We're here to help! Fill out the form below and we'll get back to you shortly.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>(555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>support@junk2cash.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 9AM - 6PM EST</p>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email *</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Junk2Cash</h4>
+                    <p>Connecting junk car buyers with quality leads across the United States.</p>
+                    <p class="operating-states">We operate in: Arizona, Alabama, California, Colorado, Connecticut, Florida, Louisiana, Maine, Michigan, Ohio, Pennsylvania, Texas, and Wisconsin.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@junk2cash.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Junk2Cash. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
