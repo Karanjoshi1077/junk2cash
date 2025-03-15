@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
@@ -14,18 +16,107 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">Junk2Cash</a>
+                <a href="index.html">
+                    <div class="logo-container">
+                        <i class="fas fa-car-burst logo-icon"></i>
+                        <div class="logo-text">
+                            <span class="junk">JUNK</span>
+                            <span class="two">2</span>
+                            <span class="cash">CASH</span>
+                        </div>
+                    </div>
+                </a>
             </div>
+
+            <!-- Add this new button -->
+            <div class="service-areas-dropdown">
+                <button class="service-areas-btn">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>Service Areas</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="states-list">
+                        <div class="states-column">
+                            <h4>High Volume Areas</h4>
+                            <a href="register.html?state=California">
+                                <i class="fas fa-star"></i> California
+                            </a>
+                            <a href="register.html?state=Florida">
+                                <i class="fas fa-star"></i> Florida
+                            </a>
+                            <a href="register.html?state=Texas">
+                                <i class="fas fa-star"></i> Texas
+                            </a>
+                            <a href="register.html?state=Ohio">
+                                <i class="fas fa-star"></i> Ohio
+                            </a>
+                        </div>
+                        <div class="states-column">
+                            <h4>Active Areas</h4>
+                            <a href="register.html?state=Alabama">Alabama</a>
+                            <a href="register.html?state=Arizona">Arizona</a>
+                            <a href="register.html?state=Colorado">Colorado</a>
+                            <a href="register.html?state=Connecticut">Connecticut</a>
+                        </div>
+                        <div class="states-column">
+                            <h4>More Locations</h4>
+                            <a href="register.html?state=Louisiana">Louisiana</a>
+                            <a href="register.html?state=Maine">Maine</a>
+                            <a href="register.html?state=Michigan">Michigan</a>
+                            <a href="register.html?state=Pennsylvania">Pennsylvania</a>
+                            <a href="register.html?state=Wisconsin">Wisconsin</a>
+                        </div>
+                        <div class="view-all">
+                            <a href="#operating-states-section" class="btn btn-primary">
+                                <i class="fas fa-map"></i> View All Locations
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="login.html" class="btn btn-login">Login</a></li>
-                <li><a href="register.html" class="btn btn-register">Register</a></li>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#how-it-works">
+                        <i class="fas fa-gears"></i>
+                        <span>How It Works</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#pricing">
+                        <i class="fas fa-tags"></i>
+                        <span>Pricing</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html" class="btn btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Login</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="register.html" class="btn btn-register">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Register</span>
+                    </a>
+                </li>
             </ul>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
+                <i class="fas fa-times" style="display: none;"></i>
             </div>
         </nav>
     </header>
@@ -37,8 +128,14 @@
                 <h1>Get Quality Junk Car Leads Delivered to You</h1>
                 <p>Connect with sellers looking to sell their junk cars. Register now to start receiving leads in your area.</p>
                 <div class="cta-buttons">
-                    <a href="register.html" class="btn btn-primary">Get Started</a>
-                    <a href="how-it-works.html" class="btn btn-secondary">Learn More</a>
+                    <a href="register.html" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Get Started</span>
+                    </a>
+                    <a href="how-it-works.html" class="btn btn-secondary" onclick="window.location.href='how-it-works.html'">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Learn More</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -178,7 +275,6 @@
                 <div class="footer-section">
                     <h4>About Junk2Cash</h4>
                     <p>Connecting junk car buyers with quality leads across the United States.</p>
-                    <p class="operating-states">We operate in: Arizona, Alabama, California, Colorado, Connecticut, Florida, Louisiana, Maine, Michigan, Ohio, Pennsylvania, Texas, and Wisconsin.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -200,6 +296,85 @@
             </div>
         </div>
     </footer>
+
+    <!-- Operating States Section -->
+    <section class="operating-states-section">
+        <div class="container">
+            <h2 class="states-title">
+                <i class="fas fa-map-marked-alt"></i>
+                EXPANDING ACROSS AMERICA
+            </h2>
+            <p class="states-subtitle">Currently Providing Quality Junk Car Leads In These States</p>
+            
+            <div class="states-grid">
+                <a href="register.html?state=Alabama" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Alabama</span>
+                    <span class="state-info">Active Leads Available</span>
+                </a>
+                <a href="register.html?state=Arizona" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Arizona</span>
+                    <span class="state-info">Active Leads Available</span>
+                </a>
+                <a href="register.html?state=California" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">California</span>
+                    <span class="state-info">High Volume Area</span>
+                </a>
+                <a href="register.html?state=Colorado" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Colorado</span>
+                    <span class="state-info">Active Leads Available</span>
+                </a>
+                <a href="register.html?state=Connecticut" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Connecticut</span>
+                    <span class="state-info">Active Leads Available</span>
+                </a>
+                <a href="register.html?state=Florida" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Florida</span>
+                    <span class="state-info">High Volume Area</span>
+                </a>
+                <a href="register.html?state=Louisiana" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Louisiana</span>
+                    <span class="state-info">Active Leads Available</span>
+                </a>
+                <a href="register.html?state=Maine" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Maine</span>
+                    <span class="state-info">Active Leads Available</span>
+                </a>
+                <a href="register.html?state=Michigan" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Michigan</span>
+                    <span class="state-info">Active Leads Available</span>
+                </a>
+                <a href="register.html?state=Ohio" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Ohio</span>
+                    <span class="state-info">High Volume Area</span>
+                </a>
+                <a href="register.html?state=Pennsylvania" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Pennsylvania</span>
+                    <span class="state-info">Active Leads Available</span>
+                </a>
+                <a href="register.html?state=Texas" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Texas</span>
+                    <span class="state-info">High Volume Area</span>
+                </a>
+                <a href="register.html?state=Wisconsin" class="state-card">
+                    <i class="fas fa-map-pin"></i>
+                    <span class="state-name">Wisconsin</span>
+                    <span class="state-info">Active Leads Available</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <script src="js/main.js"></script>
 </body>
